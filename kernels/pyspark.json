@@ -1,0 +1,17 @@
+{
+ "display_name": "pySpark",
+ "language": "python",
+ "argv": [
+  "/opt/conda/bin/python",
+  "-m",
+  "IPython.kernel",
+  "-f",
+  "{connection_file}"
+ ],
+ "env": {
+  "SPARK_HOME": "/usr/local/spark",
+  "PYTHONPATH": "/usr/local/spark/python/:/usr/local/spark/python/lib/py4j-0.8.2.1-src.zip",
+  "PYTHONSTARTUP": "/usr/local/spark/python/pyspark/shell.py",
+  "PYSPARK_SUBMIT_ARGS": "--executor-memory 512M pyspark-shell"
+ }
+}
