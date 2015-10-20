@@ -11,9 +11,10 @@ You have to install:
 2. VirtualBox Oracle VM VirtualBox Extension Pack
 
 ### Installation
-Copy the entire folder on your machine, enter in the Jupyter folder and then:
 
 ```
+git clone https://github.com/giabar/vagrant-jupyter.git
+cd vagrant-jupyter
 vagrant up
 ```
 
