@@ -28,6 +28,8 @@ http://localhost:8888
 
 ### Install Vagrant machine behind proxy:
 
+If you are working in a network behind a proxy you have to change your provisioning script.
+
 Add the following lines **on top of provisioning.sh** bash script:
 
 ```
