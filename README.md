@@ -15,6 +15,17 @@ You have to install:
 vagrant plugin install vagrant-vbguest
 ```
 
+If you'are going to use Vagrant on Windows machine, you could get this error when start a new VM:
+```
+rsync could not be found on your PATH. Make sure that rsync is properly installed on your system and available on the PATH.
+```
+In this case you have to install [cwRsync](http://www.rsync.net/resources/howto/windows_rsync.html) and add in your %PATH% the folder where you'll install it:
+
+```
+%SystemRoot%\system32;%SystemRoot%;%PROGRAMFILES%\cwRsync_5.4.1_x86_Free; ......
+```
+
+
 ### Installation
 
 ```
