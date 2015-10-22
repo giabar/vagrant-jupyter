@@ -4,6 +4,9 @@ This is a Vagrant machine with Jupyter Notebook (v4) installed.
 The kernels installed are: Python 3, Apache Spark 1.5.1 with Scala 2.10.4 and PySpark (1.5.1).
 The notebook folder is: /home/vagrant.
 
+### Features
+
+
 ### Requirements
 You have to install:
 
@@ -42,31 +45,6 @@ http://localhost:8888
 > Provisioning will take at least 20minutes!
 
 
-### Install Vagrant machine behind proxy:
+### If you're behind proxy:
 
-If you are working in a network behind a proxy you have to change your provisioning script.
-
-Add the following lines **on top of provisioning.sh** bash script:
-
-```
-export PROXYADDR=user:password@proxy-address:port
-export http_proxy=http://$PROXYADDR
-export https_proxy=http://$PROXYADDR
-export ftp_proxy=http://$PROXYADDR
-export all_proxy=http://$PROXYADDR
-export HTTP_PROXY=http://$PROXYADDR
-export HTTPS_PROXY=http://$PROXYADDR
-export FTP_PROXY=http://$PROXYADDR
-export ALL_PROXY=http://$PROXYADDR
-export no_proxy=localhost,127.0.0.0/8,::1
-export NO_PROXY=localhost,127.0.0.0/8,::1
-echo "Acquire::http::Proxy \""$http_proxy"\";" > /etc/apt/apt.conf
-echo "Acquire::https::Proxy \""$http_proxy"\";" >> /etc/apt/apt.conf
-```
-
-and the following ones **after Git is installed** (provisioning.sh script, after line 25)
-
-```
-git config --global http.proxy $http_proxy
-git config --global https.proxy $http_proxy
-```
+Install [Proxy Configuration Plugin for Vagrant](https://github.com/tmatilai/vagrant-proxyconf/)
